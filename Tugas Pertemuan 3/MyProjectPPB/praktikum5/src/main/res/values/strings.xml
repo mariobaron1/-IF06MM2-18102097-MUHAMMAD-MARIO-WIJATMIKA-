@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Praktikum5</string>
+    <string name="btn_prodi">Lihat Prodi</string>
+    <string name="hint_input_prodi">Input Prodi</string>
+    <string name="error_input_prodi">Ups, Prodi Tidak Boleh Kosong</string>
+    <string name="textview">TextView</string>
+    <string name="btn_call_browser">Website IT TELKOM PURWOKERTO</string>
+    <string name="btn_call_camera">Buka Kamera</string>
+    <string name="input_phone_number">Input Nomor Telepon</string>
+    <string name="btn_call_phone">Panggil Nomor</string>
+    <string name="btn_fragment">Buka Biodata</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_first">Masukan Biodata</string>
+    <string name="input_nama">Masukan Nama</string>
+    <string name="input_nim">Masukan Nim</string>
+    <string name="btn_to_second_fragment">Lihat Biodata</string>
+    <string name="fragment_second">Biodata</string>
+    <string name="btn_kembali_beranda">Kembali</string>
+</resources>
