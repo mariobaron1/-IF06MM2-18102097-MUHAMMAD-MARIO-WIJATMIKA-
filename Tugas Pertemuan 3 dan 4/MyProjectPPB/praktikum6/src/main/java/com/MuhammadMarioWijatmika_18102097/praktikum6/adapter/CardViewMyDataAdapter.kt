@@ -1,5 +1,7 @@
 package com.MuhammadMarioWijatmika_18102097.praktikum6.adapter
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,12 +10,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.MuhammadMarioWijatmika_18102097.praktikum6.DetailActivity
 import com.MuhammadMarioWijatmika_18102097.praktikum6.MyData
 import com.MuhammadMarioWijatmika_18102097.praktikum6.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-class CardViewMyDataAdapter (private val listMyDatas: ArrayList<MyData>) : RecyclerView.Adapter<CardViewMyDataAdapter.CardViewViewHolder>() {
+class CardViewMyDataAdapter (private val listMyDatas: ArrayList<MyData>, val context: Context) : RecyclerView.Adapter<CardViewMyDataAdapter.CardViewViewHolder>() {
 
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
@@ -45,7 +48,9 @@ class CardViewMyDataAdapter (private val listMyDatas: ArrayList<MyData>) : Recyc
                 listMyDatas[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
         holder.btnShare.setOnClickListener { Toast.makeText(holder.itemView.context, "Share " +
                 listMyDatas[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
-        holder.itemView.setOnClickListener { Toast.makeText(holder.itemView.context, "Kamu memilih " +
-                listMyDatas[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
+        holder.itemView.setOnClickListener { val moveWithObjectIntent = Intent(context, DetailActivity::class.java)
+            moveWithObjectIntent.putExtra(DetailActivity.EXTRA_MYDATA, myData)
+            context.startActivity(moveWithObjectIntent)
+        }
     }
 }
