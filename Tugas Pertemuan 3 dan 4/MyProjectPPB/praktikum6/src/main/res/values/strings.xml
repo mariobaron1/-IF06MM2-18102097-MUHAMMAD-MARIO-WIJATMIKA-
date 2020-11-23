@@ -9,7 +9,7 @@
     <string-array name="data_name">
         <item>Wisata Pagubugan</item>
         <item>The Village Purwokerto</item>
-        <item>Lokawista Baturraden</item>
+        <item>Lokawisata Baturraden</item>
         <item>Telaga Sunyi</item>
         <item>Small World</item>
         <item>Curug Jenggala</item>
@@ -148,10 +148,26 @@
     <string-array name="data_lat">
         <item>-7.333797</item>
         <item>-7.374473</item>
+        <item>-7.313132322789427</item>
+        <item>-7.30588381049539</item>
+        <item>-7.331048648732547</item>
+        <item>-7.30878193652961</item>
+        <item>-7.309733712146362</item>
+        <item>-7.305497976054241</item>
+        <item>-7.319715349505589</item>
+        <item>-7.335785651333353</item>
     </string-array>
     <string-array name="data_lang">
         <item>109.206959</item>
         <item>109.240532</item>
+        <item>109.2292170151475</item>
+        <item>109.24248028547517</item>
+        <item>109.2251512394445</item>
+        <item>109.2088313412956</item>
+        <item>109.2178760817727</item>
+        <item>109.24315303908823</item>
+        <item>109.24190961060873</item>
+        <item>109.23118822595224</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
 </resources>
