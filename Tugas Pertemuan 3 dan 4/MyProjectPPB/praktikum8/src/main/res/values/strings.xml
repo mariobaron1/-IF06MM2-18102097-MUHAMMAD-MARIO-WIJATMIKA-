@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">BroadcastReceiver(Pertemuan 8)</string>
     <string name="check_sms_permission">Check SMS Permission</string>
+    <string name="coming_from">Comming From</string>
+    <string name="text_messege">Text Messege</string>
+    <string name="close">Close</string>
+    <string name="incoming_message">Incoming Messege</string>
 </resources>
