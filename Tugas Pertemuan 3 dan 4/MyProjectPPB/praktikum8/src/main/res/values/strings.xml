@@ -5,4 +5,5 @@
     <string name="text_messege">Text Messege</string>
     <string name="close">Close</string>
     <string name="incoming_message">Incoming Messege</string>
+    <string name="incoming_massage">incoming_massage</string>
 </resources>
