@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.MuhammadMarioWijatmika_18102097.praktikum10",
+  "applicationId": "com.MuhammadMarioWijatmika_18102097.praktikum11",
   "variantName": "release",
   "elements": [
     {
@@ -14,7 +14,7 @@
       "versionCode": 1,
       "versionName": "1",
       "enabled": true,
-      "outputFile": "praktikum10-release.apk"
+      "outputFile": "praktikum11-release.apk"
     }
   ]
 }
