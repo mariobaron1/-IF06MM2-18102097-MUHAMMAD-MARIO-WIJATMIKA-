@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         binding.btnSignOut.setOnClickListener(this)
         binding.btnEmailVerify.setOnClickListener(this)
+        binding.btnDashboardQuote.setOnClickListener(this)
         if (currentUser == null) {
             val intent = Intent(this@MainActivity, SignInActivity::class.java)
             startActivity(intent)
@@ -58,9 +59,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }else{
             updateUI(currentUser)
         }
-
     }
-
 
 
     private fun sendEmailVerification() {
@@ -99,6 +98,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btnEmailVerify -> {
                 sendEmailVerification()
+            }
+            R.id.btnDashboardQuote -> {
+                val intent = Intent (this@MainActivity, DashboardQuoteActivity::class.java)
+                startActivity(intent)
             }
         }
     }
