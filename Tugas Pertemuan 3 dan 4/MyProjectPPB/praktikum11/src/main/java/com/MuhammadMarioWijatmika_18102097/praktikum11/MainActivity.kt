@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 sendEmailVerification()
             }
             R.id.btnDashboardQuote -> {
-                val intent = Intent (this@MainActivity, DashboardQuoteActivity::class.java)
+                val intent = Intent(this@MainActivity, DashboardQuoteActivity::class.java)
                 startActivity(intent)
             }
         }
