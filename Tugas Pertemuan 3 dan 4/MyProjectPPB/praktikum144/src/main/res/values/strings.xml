@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Rest API</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_my_quotes">My Quotes</string>
+    <string name="title_class_quotes">Class Quotes</string>
+    <string name="title_global_quotes">Global Quotes</string>
+</resources>
