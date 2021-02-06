@@ -1,14 +1,20 @@
 package com.MuhammadMarioWijatmika_18102097.praktikum144
 
+import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.MuhammadMarioWijatmika_18102097.praktikum144.model.Token
+import com.MuhammadMarioWijatmika_18102097.praktikum144.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var tokenPref: TokenPref
+    private lateinit var token: Token
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,5 +31,12 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        tokenPref = TokenPref(this)
+        token = tokenPref.getToken()
+        if (TextUtils.isEmpty(token.token)) {
+            val intent = Intent(this@MainActivity, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }
