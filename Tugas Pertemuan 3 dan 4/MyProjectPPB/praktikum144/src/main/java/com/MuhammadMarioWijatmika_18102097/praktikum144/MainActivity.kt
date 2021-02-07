@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         tokenPref = TokenPref(this)
+//        tokenPref.removeToken()
         token = tokenPref.getToken()
         if (TextUtils.isEmpty(token.token)) {
             val intent = Intent(this@MainActivity, LoginActivity::class.java)
