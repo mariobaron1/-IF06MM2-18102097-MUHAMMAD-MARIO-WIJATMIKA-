@@ -11,4 +11,6 @@
     <string name="description">Description</string>
     <string name="owner">Owner</string>
     <string name="date">Date</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
 </resources>

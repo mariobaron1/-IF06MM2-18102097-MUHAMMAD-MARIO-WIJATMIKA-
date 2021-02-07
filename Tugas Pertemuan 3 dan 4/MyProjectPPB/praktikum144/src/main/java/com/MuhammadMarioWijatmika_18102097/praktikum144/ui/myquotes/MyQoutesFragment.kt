@@ -1,5 +1,6 @@
 package com.MuhammadMarioWijatmika_18102097.praktikum144.ui.myquotes
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,9 +18,11 @@ import com.MuhammadMarioWijatmika_18102097.praktikum144.TokenPref
 import com.MuhammadMarioWijatmika_18102097.praktikum144.`interface`.MainView
 import com.MuhammadMarioWijatmika_18102097.praktikum144.api.MainPresenter
 import com.MuhammadMarioWijatmika_18102097.praktikum144.databinding.FragmentMyQuotesBinding
+import com.MuhammadMarioWijatmika_18102097.praktikum144.helper.REQUEST_ADD
 import com.MuhammadMarioWijatmika_18102097.praktikum144.model.Login
 import com.MuhammadMarioWijatmika_18102097.praktikum144.model.Quote
 import com.MuhammadMarioWijatmika_18102097.praktikum144.model.Token
+import com.MuhammadMarioWijatmika_18102097.praktikum144.ui.QuoteAddUpdateActivity
 import kotlinx.android.synthetic.main.fragment_my_quotes.*
 import org.jetbrains.anko.support.v4.onRefresh
 
@@ -29,6 +32,7 @@ class MyQuotesFragment : Fragment(), MainView {
     private lateinit var adapter: QuoteAdapter
     private lateinit var tokenPref: TokenPref
     private lateinit var token: Token
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState:
         Bundle?
@@ -46,6 +50,12 @@ class MyQuotesFragment : Fragment(), MainView {
             MainPresenter(this, CoroutineContextProvider())
         progressbar.visibility = View.VISIBLE
         presenter.getMyQuotes(token.token)
+        binding.fab.setOnClickListener {
+            val intent = Intent(requireActivity(),
+                QuoteAddUpdateActivity::class.java)
+            startActivityForResult(intent, REQUEST_ADD)
+        }
+
         swiperefresh.onRefresh {
             progressbar.visibility = View.INVISIBLE
             presenter.getMyQuotes(token.token)
